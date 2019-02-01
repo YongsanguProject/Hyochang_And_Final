@@ -55,9 +55,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sookmyung.intro.FirstIntroActivity" />
-        <activity android:name=".sookmyung.intro.SecondIntroActivity" />
-        <activity android:name=".sookmyung.intro.ThirdIntroActivity" />
+
         <activity android:name=".sookmyung.ar.ARActivity" />
         <activity android:name=".sookmyung.ending.camera.CameraTestActivity" />
 
@@ -83,6 +81,8 @@
         <service android:name="com.smtown.bgm.Game_Main_Bgm"
             android:enabled="true"/>
         <service android:name="com.smtown.bgm.Hyochang_Ending_BGM"
+            android:enabled="true"/>
+        <service android:name="com.smtown.bgm.Sookmyung_Main_Bgm"
             android:enabled="true"/>
     </application>
 

@@ -66,14 +66,15 @@
 
 
     </RelativeLayout>
-    <TextView
+    <ImageView
         android:id="@+id/h_btn_smreward_input"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/inputbutton"
         android:layout_below="@+id/h_reward_layout"
-        android:background="#bcbcbc"
         android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
-        android:text="입력"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>

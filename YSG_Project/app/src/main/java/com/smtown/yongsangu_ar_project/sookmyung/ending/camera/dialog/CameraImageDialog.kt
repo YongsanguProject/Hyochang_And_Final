@@ -53,7 +53,7 @@ class CameraImageDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity) 
         val currentData = stream.toByteArray()
 
         try {
-            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/camtest")
+            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/yongsanAR")
             if (!path.exists()) {
                 path.mkdirs()
             }

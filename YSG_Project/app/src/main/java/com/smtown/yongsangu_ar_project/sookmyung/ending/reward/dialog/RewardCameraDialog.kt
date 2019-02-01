@@ -14,11 +14,15 @@ import android.view.Window
 import android.widget.Toast
 import com.smtown.yongsangu_ar_project.MainActivity
 import com.smtown.yongsangu_ar_project.R
+import com.smtown.yongsangu_ar_project.UnityPlayerActivity
 import com.smtown.yongsangu_ar_project.sookmyung.ar.ARActivity
 import com.smtown.yongsangu_ar_project.sookmyung.ending.reward.RewardInputActivity
 import kotlinx.android.synthetic.main.dialog_camera_image.*
 import kotlinx.android.synthetic.main.dialog_camera_reward.*
 import java.io.*
+import com.smtown.yongsangu_ar_project.UnityPlayerActivity.activity
+
+
 
 class RewardCameraDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity) {
 
@@ -34,8 +38,17 @@ class RewardCameraDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity)
             Toast.makeText(context,"저장되었습니다", Toast.LENGTH_SHORT).show()
 
             dismiss()
+
             val intent = Intent(context,MainActivity::class.java) //저장을 하고나면 표창장 받는 부분으로 전환
             activity.startActivity(intent)
+            activity.finish()
+            if (UnityPlayerActivity.activity != null) { //액티비티가 살아 있다면 (여기서 유니티액티비티 초기화)
+
+                val activity = UnityPlayerActivity.activity as UnityPlayerActivity
+                activity.finish()
+            }
+
+
 
         }
 
@@ -52,7 +65,7 @@ class RewardCameraDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity)
         val currentData = stream.toByteArray()
 
         try {
-            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/camtest")
+            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/yongsanAR")
             if (!path.exists()) {
                 path.mkdirs()
             }

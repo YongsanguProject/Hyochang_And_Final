@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="egg2" size="500.000000 208.076279" />
+    <ImageTarget name="library2" size="300.000000 284.921021" />
+    <ImageTarget name="sundarae1" size="250.000000 105.263161" />
+    <ImageTarget name="soonheon1" size="500.000000 375.000000" />
+    <ImageTarget name="library1" size="150.000000 134.210526" />
+    <ImageTarget name="egg1" size="300.000000 92.796608" />
+    <ImageTarget name="blindalley1" size="300.000000 94.927536" />
+  </Tracking>
+</QCARConfig>

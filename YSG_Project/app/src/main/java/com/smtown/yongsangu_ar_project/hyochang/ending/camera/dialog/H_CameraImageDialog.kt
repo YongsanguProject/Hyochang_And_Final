@@ -16,6 +16,7 @@ import com.smtown.yongsangu_ar_project.R
 import com.smtown.yongsangu_ar_project.hyochang.ending.reward.H_RewardInputActivity
 import com.smtown.yongsangu_ar_project.sookmyung.ending.reward.RewardInputActivity
 import kotlinx.android.synthetic.main.dialog_camera_image.*
+import kotlinx.android.synthetic.main.dialog_h_camera_image.*
 import java.io.*
 
 class H_CameraImageDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity) {
@@ -23,11 +24,11 @@ class H_CameraImageDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity
     init {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        setContentView(R.layout.dialog_camera_image)
+        setContentView(R.layout.dialog_h_camera_image)
         this.setCancelable(false) //뒤로가기,터치 무력화
-        captureimg.setImageBitmap(bitmap)
+        h_captureimg.setImageBitmap(bitmap)
 
-        btn_save.setOnClickListener {
+        h_btn_save.setOnClickListener {
             saveBitmaptoJpeg(bitmap)
             Toast.makeText(context,"저장되었습니다",Toast.LENGTH_SHORT).show()
             dismiss()
@@ -37,7 +38,7 @@ class H_CameraImageDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity
             // activity.finish()
 
         }
-        btn_retake.setOnClickListener {
+        h_btn_retake.setOnClickListener {
             dismiss()
         }
 
@@ -54,8 +55,8 @@ class H_CameraImageDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activity
         val currentData = stream.toByteArray()
 
         try {
-            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/camtest")
-            if (!path.exists()) {
+            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/yongsanAR")
+                if (!path.exists()) {
                 path.mkdirs()
             }
 

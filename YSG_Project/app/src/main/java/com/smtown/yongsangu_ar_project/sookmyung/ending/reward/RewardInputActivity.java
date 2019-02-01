@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.smtown.yongsangu_ar_project.R;
+import com.smtown.yongsangu_ar_project.UnityPlayerActivity;
 
 public class RewardInputActivity extends AppCompatActivity {
 
@@ -17,7 +19,7 @@ public class RewardInputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reward_input);
 
 
-        TextView btn_input = findViewById(R.id.btn_smreward_input);
+        ImageView btn_input = findViewById(R.id.btn_smreward_input);
 
         btn_input.setOnClickListener(view -> {
             String input_name = ((EditText)findViewById(R.id.et_smreward_name)).getText().toString();
@@ -25,6 +27,7 @@ public class RewardInputActivity extends AppCompatActivity {
             Intent intent = new Intent(RewardInputActivity.this,RewardActivity.class);
             intent.putExtra("input_name",input_name);
             intent.putExtra("input_depart",input_depart);
+
             startActivity(intent);
         });
 

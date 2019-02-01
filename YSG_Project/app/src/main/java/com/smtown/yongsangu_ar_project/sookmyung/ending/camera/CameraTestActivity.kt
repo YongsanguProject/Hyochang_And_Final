@@ -15,6 +15,7 @@ import android.util.Log
 import android.view.WindowManager
 import android.widget.ImageView
 import com.smtown.bgm.Hyochang_Ending_BGM
+import com.smtown.bgm.Sookmyung_Main_Bgm
 import com.smtown.yongsangu_ar_project.R
 import com.smtown.yongsangu_ar_project.sookmyung.ending.camera.dialog.CameraImageDialog
 import kotlinx.android.synthetic.main.activity_ar.*
@@ -34,6 +35,7 @@ class CameraTestActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
     // 상태바를 안보이도록 합니다.
+    startService(Intent(applicationContext, Sookmyung_Main_Bgm::class.java))//숙명여대메인 비지엠
     window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
     // 화면 켜진 상태를 유지합니다.

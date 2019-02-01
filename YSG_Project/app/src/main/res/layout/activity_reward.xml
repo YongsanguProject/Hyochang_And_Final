@@ -61,7 +61,7 @@
         android:id="@+id/btn_smreward_camera"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/real_reward_layout"
-        android:background="@drawable/savebutton"
+        android:background="@drawable/camera"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

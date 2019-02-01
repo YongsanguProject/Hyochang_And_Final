@@ -20,6 +20,8 @@ import com.unity3d.player.*;
 
 public class UnityPlayerActivity extends Activity
 {
+    public static UnityPlayerActivity activity = null;    //액티비티 변수 선언
+
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
     String msg;
 
@@ -27,6 +29,7 @@ public class UnityPlayerActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        activity = this;
         //게임 갈래 구분하는 곳///////
         Intent intent = getIntent();
 
@@ -46,16 +49,18 @@ public class UnityPlayerActivity extends Activity
 
             UnityPlayer.UnitySendMessage("AndroidManager","ChangeScene",msg);
 
-
     }
 
     public static void CallActivity(Activity activity){ //숙대맵 - 사진찍기
         Intent intent = new Intent(activity,CameraTestActivity.class);
         activity.startActivity(intent);
+        //activity.finish();
     }
     public static void CallActivity2(Activity activity){//숙대맵 - 표창창부분 정보 입력하기
         Intent intent = new Intent(activity,RewardInputActivity.class);
         activity.startActivity(intent);
+        //activity.finish();
+
     }
     public static void CallActivity3(Activity activity){ //효창맵 - 사진찍기
         Intent intent = new Intent(activity,H_CameraTestActivity.class);
