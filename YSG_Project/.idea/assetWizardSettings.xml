@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="117" />
+                                                <entry key="scalingPercent" value="83" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,7 +33,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../../ex_icon.png" />
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../../real_appicon.jpeg" />
                                     </map>
                                   </option>
                                 </PersistentState>
