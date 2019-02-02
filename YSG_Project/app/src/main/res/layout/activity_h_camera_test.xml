@@ -16,6 +16,14 @@
         android:scaleType="fitXY"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/retry_icon"
+        android:id="@+id/h_btnTransform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
 
 
     <LinearLayout
@@ -25,19 +33,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <Button
+        <ImageView
+            android:layout_marginBottom="20dp"
             android:id="@+id/h_btnCapture"
+            android:src="@drawable/camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="캡처" />
+            />
 
-        <Button
-            android:id="@+id/h_btnTransform"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="전환" />
+
 
     </LinearLayout>
 

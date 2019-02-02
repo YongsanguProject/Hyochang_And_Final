@@ -164,4 +164,5 @@ class H_CameraTestActivity: AppCompatActivity() {
         h_cameraPreview.addView(myCameraPreview)
 
     }
+
 }

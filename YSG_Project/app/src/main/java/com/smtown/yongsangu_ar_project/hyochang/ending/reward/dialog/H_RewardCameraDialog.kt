@@ -14,6 +14,7 @@ import android.view.Window
 import android.widget.Toast
 import com.smtown.yongsangu_ar_project.MainActivity
 import com.smtown.yongsangu_ar_project.R
+import com.smtown.yongsangu_ar_project.UnityPlayerActivity
 import kotlinx.android.synthetic.main.dialog_camera_reward.*
 import java.io.*
 
@@ -33,6 +34,12 @@ class H_RewardCameraDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activit
             dismiss()
             val intent = Intent(context, MainActivity::class.java) //저장을 하고나면 표창장 받는 부분으로 전환
             activity.startActivity(intent)
+            activity.finish()
+            if (UnityPlayerActivity.activity != null) { //액티비티가 살아 있다면 (여기서 유니티액티비티 초기화)
+
+                val activity = UnityPlayerActivity.activity as UnityPlayerActivity
+                activity.finish()
+            }
 
         }
 
@@ -49,7 +56,7 @@ class H_RewardCameraDialog(activity: Activity, bitmap: Bitmap?) : Dialog(activit
         val currentData = stream.toByteArray()
 
         try {
-            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/camtest")
+            val path = File(Environment.getExternalStorageDirectory().absolutePath + "/yongsanAR")
             if (!path.exists()) {
                 path.mkdirs()
             }

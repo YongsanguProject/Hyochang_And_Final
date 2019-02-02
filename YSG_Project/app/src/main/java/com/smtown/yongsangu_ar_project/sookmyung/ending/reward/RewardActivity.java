@@ -14,6 +14,7 @@ import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.smtown.yongsangu_ar_project.R;
+import com.smtown.yongsangu_ar_project.UnityPlayerActivity;
 import com.smtown.yongsangu_ar_project.sookmyung.ending.camera.dialog.CameraImageDialog;
 import com.smtown.yongsangu_ar_project.sookmyung.ending.reward.dialog.RewardCameraDialog;
 

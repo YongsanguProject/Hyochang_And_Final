@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="260dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
     android:layout_height="500dp">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,28 +16,34 @@
 
         <LinearLayout
             android:paddingBottom="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="2"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <ImageView
+                android:layout_weight="1"
+
                 android:layout_alignParentBottom="true"
                 android:id="@+id/btn_save"
-                android:background="#bcbcbc"
+                android:src="@drawable/savebutton_blue"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="저장하기"/>
+               />
 
-            <TextView
+            <ImageView
+                android:layout_weight="1"
                 android:id="@+id/btn_retake"
-                android:layout_marginLeft="30dp"
+
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
 
-                android:background="#bcbcbc"
+                android:src="@drawable/retry"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

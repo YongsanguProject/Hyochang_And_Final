@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import com.smtown.bgm.Game_Main_Bgm;
 import com.smtown.bgm.Hyochang_Ending_BGM;
+import com.smtown.bgm.Sookmyung_Main_Bgm;
 import com.smtown.yongsangu_ar_project.hyochang.ending.camera.H_CameraTestActivity;
-import com.smtown.yongsangu_ar_project.sookmyung.intro.FirstIntroActivity;
 import com.smtown.yongsangu_ar_project.splash.SplashActivity;
 
 public class MainActivity extends AppCompatActivity{
@@ -40,18 +40,15 @@ public class MainActivity extends AppCompatActivity{
         map_sook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "숙대맵은 아직 서비스 중입니다:)", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "숙대맵은 아직 서비스 중입니다:)", Toast.LENGTH_SHORT).show();
                 //진짜 부분
-//
-//                Intent intent1 = new Intent(MainActivity.this, FirstIntroActivity.class);
-//                startActivity(intent1);
 
 
-//
-//                Intent intent1 = new Intent(MainActivity.this, com.smtown.yongsangu_ar_project.UnityPlayerActivity.class);
-//                msg = "FindPark";
-//                intent1.putExtra("scene",msg);
-//                startActivity(intent1);
+                Intent intent1 = new Intent(MainActivity.this, com.smtown.yongsangu_ar_project.UnityPlayerActivity.class);
+                msg = "SookmyungIntro";
+//                msg = "FindPark"; //테스트용
+                intent1.putExtra("scene",msg);
+                startActivity(intent1);
             }
         });
 
@@ -84,6 +81,8 @@ public class MainActivity extends AppCompatActivity{
     protected void onPause() { //맵 선택했을때 / 홈 키 눌렀을때
         super.onPause();
         stopService(new Intent(MainActivity.this,Game_Main_Bgm.class));
+
+
     }
 
     @Override
@@ -94,6 +93,16 @@ public class MainActivity extends AppCompatActivity{
         }else{
             startService(new Intent(MainActivity.this,Game_Main_Bgm.class));
             stopService(new Intent(MainActivity.this,Hyochang_Ending_BGM.class));
+            stopService(new Intent(MainActivity.this,Sookmyung_Main_Bgm.class));
         }
     }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        stopService(new Intent(MainActivity.this,Game_Main_Bgm.class));
+//        stopService(new Intent(MainActivity.this,Hyochang_Ending_BGM.class));
+//        stopService(new Intent(MainActivity.this,Sookmyung_Main_Bgm.class));
+//
+//    }
 }
