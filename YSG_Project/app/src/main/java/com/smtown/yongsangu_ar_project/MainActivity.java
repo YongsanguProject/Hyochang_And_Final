@@ -1,5 +1,6 @@
 package com.smtown.yongsangu_ar_project;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -29,11 +30,20 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (UnityPlayerActivity.activity != null) { //액티비티가 살아 있다면 (여기서 유니티액티비티 초기화)
+
+            Activity activity = UnityPlayerActivity.activity;
+            activity.finish();
+        }
+
         map_sook = findViewById(R.id.map_sook);
         map_hyo = findViewById(R.id.map_hyo);
 
         Intent intent_r = getIntent();
         start = intent_r.getIntExtra("start",0);
+
+
+
 
 
 
