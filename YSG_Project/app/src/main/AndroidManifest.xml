@@ -55,7 +55,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".sookmyung.ar.ARActivity" />
         <activity android:name=".sookmyung.ending.camera.CameraTestActivity" />
 
@@ -73,17 +72,20 @@
         <activity android:name=".sookmyung.ending.reward.RewardActivity" />
         <activity android:name=".splash.ProgressActivity" />
         <activity android:name=".hyochang.ending.reward.H_RewardInputActivity" />
-        <activity android:name=".hyochang.ending.reward.H_RewardActivity"></activity>
-
-        <activity android:name=".hyochang.ending.camera.H_CameraTestActivity"/>
-
+        <activity android:name=".hyochang.ending.reward.H_RewardActivity" />
+        <activity android:name=".hyochang.ending.camera.H_CameraTestActivity" />
         //배경음악 서비스 부분
-        <service android:name="com.smtown.bgm.Game_Main_Bgm"
-            android:enabled="true"/>
-        <service android:name="com.smtown.bgm.Hyochang_Ending_BGM"
-            android:enabled="true"/>
-        <service android:name="com.smtown.bgm.Sookmyung_Main_Bgm"
-            android:enabled="true"/>
+        <service
+            android:name="com.smtown.bgm.Game_Main_Bgm"
+            android:enabled="true" />
+        <service
+            android:name="com.smtown.bgm.Hyochang_Ending_BGM"
+            android:enabled="true" />
+        <service
+            android:name="com.smtown.bgm.Sookmyung_Main_Bgm"
+            android:enabled="true" />
+
+        <activity android:name=".splash.WarningActivity"></activity>
     </application>
 
 </manifest>

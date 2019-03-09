@@ -29,7 +29,7 @@ public class ProgressActivity extends AppCompatActivity {
         //
         progress_percent = 0;
 
-        final Intent intent = new Intent(ProgressActivity.this, MainActivity.class);
+        final Intent intent = new Intent(ProgressActivity.this, WarningActivity.class);
 //        final Intent intent = new Intent(ProgressActivity.this, UnityPlayerActivity.class);
        // msg = "FindPark";
         //intent.putExtra("scene",msg);
