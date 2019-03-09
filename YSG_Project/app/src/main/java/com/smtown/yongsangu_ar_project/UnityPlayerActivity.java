@@ -71,8 +71,9 @@ public class UnityPlayerActivity extends Activity
         activity.startActivity(intent);
     }
     public static void CallActivity5(Activity activity){//효창맵 - 게임종료버튼 눌렀을때 메뉴선택화면으로 돌아감
-        Intent intent = new Intent(activity,MainActivity.class);
-        activity.startActivity(intent);
+      // Intent intent = new Intent(activity,MainActivity.class);
+       //activity.startActivity(intent);
+        activity.finish();
     }
 
     @Override
